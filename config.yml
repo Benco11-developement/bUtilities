@@ -1,0 +1,13 @@
+config:
+  #Active ou désactive le message de connexion/déconnexion
+  join: true
+  firstjoin: true
+  leave: true
+  #Mise à jour automatique
+  auto-update: false
+messages:
+  broadcast:
+    # Quand le joueur rejoint / quitte, %player% = joueur, %e% = é
+    join: "&6%player% s'est connect%e% sur le serveur !"
+    firstjoin: "&6%player% s'est connect%e% pour la première fois sur le serveur !"
+    leave: "&c%player% a quitt%e% le serveur !"

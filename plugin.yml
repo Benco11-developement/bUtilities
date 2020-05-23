@@ -1,0 +1,34 @@
+name: bUtilities
+version: dev-7
+author: Benco11
+main: fr.benco11.butilities.BUtilities
+commands:
+  gm:
+    description: Raccourci de /gamemode
+    permission: minecraft.gamemode
+    usage: /gm <mode> [<player>]
+    aliases: [gmode, gmmode]
+  feed:
+    description: Nourrit entièrement
+    permission: butilities.feed
+    usage: /feed [<player>]
+  heal:
+    description: Redonne la vie
+    permission: butilities.heal
+    usage: /heal [<player>]
+  top:
+    description: Vous téléporte en haut de votre position
+    permission: butilities.top
+    usage: /top
+  spam:
+    description: Spam de message un joueur
+    permission: butilities.spam
+    usage: /spam <player>
+  giveall:
+    description: Permet de donner des items/blocks à tout le monde
+    permission: butilities.giveall
+    usage: /giveall <block> [<quantity>] [<metadata>]
+  check:
+    description: Donne des informations sur le joueur demandé
+    permission: butilities.check
+    usage: /check <player>
