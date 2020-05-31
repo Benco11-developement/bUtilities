@@ -1,2 +1,2 @@
 # bUtilities
- Plugin for Minecraft
+ Plugin français pour Minecraft
