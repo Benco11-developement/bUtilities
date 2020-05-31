@@ -1,0 +1,48 @@
+name: bUtilities
+version: 1.0
+author: Benco11
+main: fr.benco11.butilities.BUtilities
+commands:
+  gm:
+    description: Raccourci de /gamemode
+    permission: butilities.gm
+    usage: /gm <mode> [<player>]
+    aliases: [gmode, gmmode]
+  feed:
+    description: Nourrit entièrement
+    permission: butilities.feed
+    usage: /feed [<player>]
+  heal:
+    description: Redonne la vie
+    permission: butilities.heal
+    usage: /heal [<player>]
+  top:
+    description: Vous téléporte en haut de votre position
+    permission: butilities.top
+    usage: /top
+  spam:
+    description: Spam de message un joueur
+    permission: butilities.spam
+    usage: /spam <player>
+  giveall:
+    description: Permet de donner des items/blocks à tout le monde
+    permission: butilities.giveall
+    usage: /giveall <block> [<quantity>] [<metadata>]
+  check:
+    description: Donne des informations sur un joueur
+    permission: butilities.check
+    aliases: [checkplayer, playercheck]
+    usage: /check <player>
+  report:
+    description: Permet de signaler des joueurs
+    permission: butilities.report
+    usage: /report <player/list/delete/clear> [<reason>/<id>]
+  bienvenue:
+    description: Souhaite la bienvenue au nouveau joueurs
+    permission: butilities.bvn
+    aliases: bvn
+    usage: /bienvenue
+  staff:
+    description: Affiche les staffs en ligne
+    permission: butilities.staff
+    usage: /staff
