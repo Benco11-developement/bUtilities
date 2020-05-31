@@ -1,11 +1,11 @@
 name: bUtilities
-version: dev-7
+version: 1.0
 author: Benco11
 main: fr.benco11.butilities.BUtilities
 commands:
   gm:
     description: Raccourci de /gamemode
-    permission: minecraft.gamemode
+    permission: butilities.gm
     usage: /gm <mode> [<player>]
     aliases: [gmode, gmmode]
   feed:
@@ -29,6 +29,20 @@ commands:
     permission: butilities.giveall
     usage: /giveall <block> [<quantity>] [<metadata>]
   check:
-    description: Donne des informations sur le joueur demandé
+    description: Donne des informations sur un joueur
     permission: butilities.check
+    aliases: [checkplayer, playercheck]
     usage: /check <player>
+  report:
+    description: Permet de signaler des joueurs
+    permission: butilities.report
+    usage: /report <player/list/delete/clear> [<reason>/<id>]
+  bienvenue:
+    description: Souhaite la bienvenue au nouveau joueurs
+    permission: butilities.bvn
+    aliases: bvn
+    usage: /bienvenue
+  staff:
+    description: Affiche les staffs en ligne
+    permission: butilities.staff
+    usage: /staff

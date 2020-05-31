@@ -3,11 +3,20 @@ config:
   join: true
   firstjoin: true
   leave: true
-  #Mise à jour automatique
-  auto-update: false
+  #Active le système de bienvenue, si oui, quel commande est effectué (sans le /)
+  bvn: true
+  bvncmd: ""
+  #Liste des staffs
+  stafflist: ""
 messages:
   broadcast:
     # Quand le joueur rejoint / quitte, %player% = joueur, %e% = é
     join: "&6%player% s'est connect%e% sur le serveur !"
     firstjoin: "&6%player% s'est connect%e% pour la première fois sur le serveur !"
     leave: "&c%player% a quitt%e% le serveur !"
+  player:
+    # Couleur de la liste des report
+    color: "c"
+    # Couleur de succès / d'erreur
+    succes: "6"
+    error: "4"
