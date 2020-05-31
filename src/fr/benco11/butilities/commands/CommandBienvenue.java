@@ -29,7 +29,7 @@ public class CommandBienvenue implements CommandExecutor {
 				Player play = (Player) player;
 				Player joueur[] = Bukkit.getOnlinePlayers();
 				for(Player pl : joueur) {
-					if(yamlFile.getBoolean("players." + pl.getUniqueId() + ".bvn")) {
+					if(yamlFile.getBoolean("players." + pl.getUniqueId() + ".bvn") == true) {
 						if((!(yamlFile.getString("players." + pl.getUniqueId() + ".bvnC").contains(play.getName()))) && pl.getUniqueId() != play.getUniqueId()) {
 							Bukkit.dispatchCommand(Bukkit.getConsoleSender(), main.getConfig().getString("config.bvncmd").replaceAll("%player%", play.getName()));
 							Bukkit.broadcastMessage("§a" + play.getName() + " souhaite la bienvenue à : " + pl.getName());

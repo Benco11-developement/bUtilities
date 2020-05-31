@@ -42,7 +42,8 @@ public class BUtilitiesListener implements Listener {
 				yamlFile.set("players." + player.getUniqueId() + ".name", player.getName());
 				yamlFile.set("players." + player.getUniqueId() + ".ip", player.getAddress().toString());
 				if(main.getConfig().getBoolean("config.bvn") == true) {
-					yamlFile.set("players." + player.getUniqueId() + ".bvnC", '"' + '"');
+					yamlFile.set("players." + player.getUniqueId() + ".bvnC", "");
+					yamlFile.set("players." + player.getUniqueId() + ".bvn", true);
 				}
 				try {
 					yamlFile.save(user);
@@ -50,7 +51,23 @@ public class BUtilitiesListener implements Listener {
 					e.printStackTrace();
 				}
 				if(main.getConfig().getBoolean("config.bvn") == true) {
-					task.runTaskLater(main, 20 * 10);
+					new BukkitRunnable() {
+			            @Override
+			            public void run() {
+			            	try {
+			        			Thread.sleep(15000);
+			        		} catch (InterruptedException e1) {
+			        		}
+			        		yamlFile.set("players." + player.getUniqueId() + ".bvn", null);
+			        		yamlFile.set("players." + player.getUniqueId() + ".bvnC", null);
+			        		try {
+			        			yamlFile.save(user);
+			        		} catch (IOException e) {
+			        			e.printStackTrace();
+			        		}
+			            }
+			            
+			        }.runTaskLater(this.main, 300);
 				}
 				
 			} 
@@ -91,20 +108,6 @@ public class BUtilitiesListener implements Listener {
 		}
 	}
 	
-	BukkitRunnable task = new BukkitRunnable() {
-		@Override
-		public void run() {
-			yamlFile.set("players." + player.getUniqueId() + ".bvn", null);
-			yamlFile.set("players." + player.getUniqueId() + ".bvnC", null);
-			try {
-				yamlFile.save(user);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-    	}
-	
-	};
-	
 	@SuppressWarnings("deprecation")
 	public void onBlockPlace(BlockPlaceEvent event) {
 		Player player = event.getPlayer();
@@ -131,4 +134,5 @@ public class BUtilitiesListener implements Listener {
 			}
 		}
 	}
+
 }
